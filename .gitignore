@@ -4,3 +4,5 @@ microsoft.csv
 .env
 /catboost_info
 /models/model_sbert
+news_env/
+.vscode/
