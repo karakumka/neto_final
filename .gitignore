@@ -6,3 +6,4 @@ microsoft.csv
 /models/model_sbert
 news_env/
 .vscode/
+__pycache__/
