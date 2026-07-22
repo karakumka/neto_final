@@ -94,8 +94,3 @@ def fetch_articles_for_ticker(ticker: str, period: int = 7, limit: int = 1000,
                 )
 
     return pd.DataFrame(all_rows)
-
-if __name__ == "__main__":
-    df = fetch_articles_for_ticker("AAPL", period=7)
-    print(df)
-    print(df.shape)

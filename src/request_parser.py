@@ -126,9 +126,3 @@ User request:
         "period_days": period_days,
         "original_query": user_query,
     }
-
-
-if __name__ == "__main__":
-    query = "Что пишут про нетфликс за последние четыре дня?"
-    result = parse_brand_health_request(query)
-    print(result)

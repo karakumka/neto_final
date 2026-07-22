@@ -24,7 +24,3 @@ def ask_ollama(prompt: str, model: str = DEFAULT_MODEL, temperature: float = 0.0
         raise RuntimeError(f"Unexpected Ollama response format: {data}")
 
     return data["response"].strip()
-
-if __name__ == "__main__":
-    answer = ask_ollama("Say hello in one short sentence.")
-    print(answer)
