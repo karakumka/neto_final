@@ -2,12 +2,12 @@ import requests
 
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
-DEFAULT_MODEL = "qwen2.5vl:7b"
+DEFAULT_MODEL = "qwen3:14b"
 
 
 def ask_ollama(prompt: str, model: str = DEFAULT_MODEL, temperature: float = 0.0) -> str:
     """
-    Функция посылает запрос к модели Qwen/Qwen2.5-VL-7B-Instruct, установленной локально через Ollama.
+    Функция посылает запрос к модели Qwen/Qwen3-14B, установленной локально через Ollama.
     """
 
     payload = {"model": model, "prompt": prompt, "stream": False, "options": {"temperature": temperature}}
