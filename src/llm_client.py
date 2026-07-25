@@ -13,7 +13,7 @@ def ask_ollama(prompt: str, model: str = DEFAULT_MODEL, temperature: float = 0.0
     payload = {"model": model, "prompt": prompt, "stream": False, "options": {"temperature": temperature}}
 
     try:
-        response = requests.post(OLLAMA_URL, json=payload, timeout=120)
+        response = requests.post(OLLAMA_URL, json=payload, timeout=300)
         response.raise_for_status()
     except requests.RequestException as error:
         raise RuntimeError(f"Failed to get response from Ollama: {error}")

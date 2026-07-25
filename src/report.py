@@ -73,8 +73,8 @@ Relevance rules:
 - If most articles are indirect or unclear, say that the data does not provide enough direct evidence about the brand's media health.
 
 Report structure:
-1. Общая оценка
-2. Что формирует фон
+1. Общая оценка медиаполя вокруг бренда
+2. Что формирует медиаполе
 3. Риски и ограничения
 4. Вывод
 
