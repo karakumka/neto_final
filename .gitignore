@@ -3,7 +3,7 @@
 .env
 /catboost_info
 /models/model_sbert
-news_env/
+brand-health/
 .vscode/
 __pycache__/
 Project.ipynb
