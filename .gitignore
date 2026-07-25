@@ -7,3 +7,5 @@ microsoft.csv
 news_env/
 .vscode/
 __pycache__/
+Project.ipynb
+Project_Dataset_Massive.ipynb
