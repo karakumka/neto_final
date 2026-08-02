@@ -2,6 +2,7 @@
 *.bin
 .env
 /notebooks/catboost_info
+/catboost_info
 /models/model_sbert
 brand-health/
 .vscode/
