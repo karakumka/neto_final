@@ -25,7 +25,7 @@ neto_final/
 │
 ├── models/
 │   ├── model_classification.cbm  # обученная модель CatBoost-классификатора
-│   ├── model_ohe.pkl             # сохранённый OneHotEncoder для признака компании
+│   ├── model_ohe.pkl             # сохраненный OneHotEncoder для признака компании
 │   └── model_sbert/              # локальная модель SentenceTransformer для получения эмбеддингов
 │
 ├── notebooks/
