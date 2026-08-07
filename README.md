@@ -38,6 +38,40 @@ neto_final/
     └── dataset_massive.csv       # датасет, сформированный через API-запрос к порталу Massive
 ```
 
+```mermaid
+sequenceDiagram
+    actor User as Пользователь
+    participant App as Streamlit
+    participant Pipeline as pipeline.py
+    participant Parser as request_parser.py
+    participant LLM as Ollama<br/>Qwen3-14B
+    participant API as Massive API
+    participant ML as ML pipeline<br/>preprocessing + inference + aggregation
+    participant Report as report.py
+
+    User->>App: Вводит запрос
+    App->>Pipeline: Запускает пайплайн
+
+    Pipeline->>Parser: Передает запрос
+    Parser->>LLM: Извлекает компанию и период
+    LLM-->>Parser: Возвращает структурированные параметры
+    Parser-->>Pipeline: Возвращает ticker,<br/>company_name, period_days
+
+    Pipeline->>API: Запрашивает новости
+    API-->>Pipeline: Возвращает публикации
+
+    Pipeline->>ML: Предобработка, классификация, агрегация
+    ML-->>Pipeline: Возвращает sentiment summary и статьи для отчета
+
+    Pipeline->>Report: Передает агрегированные результаты
+    Report->>LLM: Отправляет агрегированные результаты и промпт
+    LLM-->>Report: Генерирует текст аналитического отчета
+    Report-->>Pipeline: Возвращает текст отчета
+
+    Pipeline-->>App: Возвращает результаты анализа
+    App-->>User: Показывает отчет,<br/>графики и таблицу статей
+```
+
 ## 2. Особенности реализации
 ### 2.1. Использование SentenceTransformer для получения текстовых эмбеддингов
 
